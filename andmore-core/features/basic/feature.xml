@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.eclipse.andmore.android.basic.feature"
-      label="%feature.android.label"
+      label="%feature.label"
       version="0.5.0.qualifier"
-      provider-name="%feature.android.provider.name"
+      provider-name="%feature.provider.name"
       plugin="org.eclipse.andmore.android.common"
       os="linux,macosx,win32"
       ws="carbon,cocoa,gtk,win32"
@@ -12,23 +12,23 @@
       license-feature-version="0.0.0">
 
    <description>
-      %feature.android.description
+      %feature.description
    </description>
 
    <copyright>
-      %feature.android.copyright
+      %feature.copyright
    </copyright>
 
    <license url="%licenseURL">
       %license
    </license>
 
-   <requires>
-      <import feature="org.eclipse.datatools.enablement.sqlite.feature" version="1.8.0" match="greaterOrEqual"/>
-   </requires>
-   
    <includes
          id="org.eclipse.andmore.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.andmore.sign.feature"
          version="0.0.0"/>
 
    <includes
@@ -59,6 +59,9 @@
          id="org.eclipse.sequoyah.vnc.vncviewer.feature"
          version="0.0.0"/>
 
+   <requires>
+      <import feature="org.eclipse.datatools.enablement.sqlite.feature" version="1.8.0" match="greaterOrEqual"/>
+   </requires>
 
    <plugin
          id="org.eclipse.andmore.android.common"
@@ -96,24 +99,17 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.andmore.android.certmanager"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.andmore.android.logger"
          download-size="0"
          install-size="0"
          version="0.0.0"/>
-            
+
    <plugin
          id="org.eclipse.andmore.android"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>	
+         unpack="false"/>
 
    <plugin
          id="org.eclipse.andmore.android.emulator"
